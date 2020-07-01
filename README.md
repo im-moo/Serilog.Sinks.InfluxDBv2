@@ -14,7 +14,7 @@ Then enable the sink using `WriteTo.InfluxDBv2()`:
 
 ```csharp
 Log.Logger = new LoggerConfiguration()
-  .WriteTo.InfluxDB("Api", "http://127.0.0.1:8086", "MyApplication", "MyAccessToken")
+  .WriteTo.InfluxDBv2("Api", "http://127.0.0.1:8086", "MyApplication", "MyAccessToken")
   .CreateLogger();
 ```
 
@@ -45,13 +45,13 @@ In your `appsettings.json` file, under the `Serilog` node, :
   "Serilog": {
     "WriteTo": [
       {
-        "Name": "Console",
-        "Args":[
+        "Name": "InfluxDBv2",
+        "Args": {
           "source": "Api",
           "address": "http://127.0.0.1:8086",
           "bucket": "MyApplication",
           "token": "MyAccessToken"
-        ]
+        }
       }
     ]
   }
