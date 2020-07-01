@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>A Serilog sink that writes log events to the InfluxDB Instance.</Description>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Thomas ILLIET</Authors>
+    <PackageIcon>Serilog.Sinks.InfluxDBv2.png</PackageIcon>
+    <PackageProject>https://github.com/thomas-illiet/Serilog.Sinks.InfluxDBv2</PackageProject>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/thomas-illiet/Serilog.Sinks.InfluxDBv2</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <GenerateAssemblyVersionAttribute>true</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>true</GenerateAssemblyFileVersionAttribute>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+    <RootNamespace>Serilog</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="InfluxDB.Client" Version="1.9.0" />
+    <PackageReference Include="Serilog" Version="2.9.0" />
+    <PackageReference Include="Serilog.Sinks.PeriodicBatching" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Serilog.Sinks.InfluxDBv2.png" Pack="true" PackagePath="\">
+      <Visible>false</Visible>
+    </None>
+  </ItemGroup>
+
+</Project>
